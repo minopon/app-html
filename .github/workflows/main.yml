@@ -17,4 +17,4 @@ jobs:
           git remote add heroku-api https://heroku:b2f73873-ddee-45ee-8cc3-7e632ebe126a@git.heroku.com/app-html-1.git
       - name: Deploy api to Heroku
         run: |
-          git subtree push --prefix server xxx-app main
+          git subtree push --prefix xxx-app heroku main
