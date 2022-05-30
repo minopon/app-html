@@ -1,17 +1,20 @@
-name: Deploy
+name: Staging deployment
 
 on:
   push:
     branches:
-      - main
+      - dev
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
-        with:
-          heroku_api_key: b2f73873-ddee-45ee-8cc3-7e632ebe126a
-          heroku_app_name: app-html-1
-          heroku_email: udkiwn@gmail.com
+      - uses: actions/checkout@v1
+
+      - name: Add api remote origin
+        run: |
+          git remote add heroku-api https://heroku:b2f73873-ddee-45ee-8cc3-7e632ebe126a@git.heroku.com/app-html-1.git
+      - name: Deploy api to Heroku
+        run: |
+          git subtree push --prefix server xxx-app main
