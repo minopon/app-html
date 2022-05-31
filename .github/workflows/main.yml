@@ -12,9 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: Add api remote origin
+      - name: Add heroku remote origin
         run: |
-          git remote add heroku-app https://heroku:b2f73873-ddee-45ee-8cc3-7e632ebe126a@git.heroku.com/nokoyuru.git
-      - name: Deploy api to Heroku
+          git remote add heroku https://heroku:b2f73873-ddee-45ee-8cc3-7e632ebe126a@git.heroku.com/app-html-1.git
+      - name: Deploy app to Heroku
         run: |
-          git subtree push --prefix xxx-app heroku-app main
+          git subtree push --prefix xxx-app heroku main
