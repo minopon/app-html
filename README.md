@@ -1,4 +1,5 @@
 ## Githubにapp-htmlリポジトリ作成
+以下のディレクトリ、ソースをプッシュしておく。
 ```
 text
 image
