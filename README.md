@@ -6,6 +6,11 @@ xxx-app　←アプリ／サイトのソースコードを入れるディレク�
   index.php　←xxx-appディレクトリに追加
   composer.json　←xxx-appディレクトリに追加
 ```
+## HerokuでAPI_KEYを取得
+https://dashboard.heroku.com/account
+
+## Githubのapp-htmlリポジトリ設定でAPI_KEYをSecretsに登録
+https://github.com/minopon/app-html/settings/secrets/actions
 
 ## GIthubActions設定
 app-html/.github/workflows/main.yml
