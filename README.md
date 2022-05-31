@@ -6,6 +6,8 @@ xxx-app　←アプリ／サイトのソースコードを入れるディレク�
   index.php　←xxx-appディレクトリに追加
   composer.json　←xxx-appディレクトリに追加
 ```
+## herokuで空のapp-html-1アプリを作る
+
 ## HerokuでAPI_KEYを取得
 https://dashboard.heroku.com/account
 
@@ -13,6 +15,9 @@ https://dashboard.heroku.com/account
 https://github.com/minopon/app-html/settings/secrets/actions
 
 ## GIthubActions設定
+https://github.com/minopon/app-html/actions/new
+の`set up a workflow yourself`リンクから以下を設定。
+
 app-html/.github/workflows/main.yml
 ```
 name: Heroku deployment
@@ -37,9 +42,7 @@ jobs:
           git subtree push --prefix xxx-app heroku main
 ```
 
-## herokuで空のapp-html-1アプリを作る
-
-## Github にプッシュ
+## 以降はGithubにプッシュするとHerokuに自動デプロイされる
 ```
 git push origin main
 ```
