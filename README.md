@@ -26,7 +26,7 @@ https://github.com/minopon/app-html/settings/secrets/actions
 
 ## GIthubActions設定
 https://github.com/minopon/app-html/actions/new
-の`set up a workflow yourself`リンクから以下を設定。
+の`set up a workflow yourself`リンクから以下を設定。(以下設定して保存すると実行されてHerokuにデプロイされる)
 
 app-html/.github/workflows/main.yml
 ```
