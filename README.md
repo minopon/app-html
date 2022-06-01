@@ -8,6 +8,16 @@ xxx-app　←アプリ／サイトのソースコードを入れるディレク�
   composer.json　←xxx-appディレクトリに追加
 ```
 
+## app-htmlリポジトリをクローンする
+```
+git clone git@github.com:minopon/app-html.git
+```
+
+## heroku cli でapp-html-1アプリを作る
+```
+heroku create --app app-html-1
+```
+
 ## HerokuでAPI_KEYを取得
 https://dashboard.heroku.com/account
 
@@ -40,16 +50,6 @@ jobs:
       - name: Deploy app to Heroku
         run: |
           git subtree push --prefix xxx-app heroku main
-```
-
-## app-htmlリポジトリをクローンする
-```
-git clone git@github.com:minopon/app-html.git
-```
-
-## heroku cli でapp-html-1アプリを作る
-```
-heroku create --app app-html-1
 ```
 
 ## 何か更新してGithubにプッシュするとHerokuに自動デプロイされる
