@@ -13,7 +13,7 @@ xxx-app　←アプリ／サイトのソースコードを入れるディレク�
 git clone git@github.com:minopon/app-html.git
 ```
 
-## heroku CLI でapp-html-1アプリを作る
+## Heroku CLI でapp-html-1アプリを作る
 ```
 heroku create --app app-html-1
 ```
@@ -26,7 +26,8 @@ https://github.com/minopon/app-html/settings/secrets/actions
 
 ## GIthubActions設定
 https://github.com/minopon/app-html/actions/new
-の`set up a workflow yourself`リンクから以下を設定。(以下設定して保存すると実行されてHerokuにデプロイされる)
+の`set up a workflow yourself`リンクから以下を設定。
+以下設定して保存すると、そのまま実行されてHerokuにデプロイされる。
 
 app-html/.github/workflows/main.yml
 ```
@@ -52,7 +53,7 @@ jobs:
           git subtree push --prefix xxx-app heroku main
 ```
 
-## 何か更新してGithubにプッシュするとHerokuに自動デプロイされる
+## 以降はGithubにプッシュするとHerokuに自動デプロイされる
 ```
 git add .
 git commit -m fix
