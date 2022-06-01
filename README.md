@@ -1,5 +1,5 @@
-## Githubにapp-htmlリポジトリ作成
-以下のディレクトリ、ソースをプッシュしておく。
+## Githubにapp-htmlリポジトリの構成
+以下のディレクトリ、ソース構成が前提
 ```
 text
 image
@@ -7,7 +7,6 @@ xxx-app　←アプリ／サイトのソースコードを入れるディレク�
   index.php　←xxx-appディレクトリに追加
   composer.json　←xxx-appディレクトリに追加
 ```
-## herokuで空のapp-html-1アプリを作る
 
 ## HerokuでAPI_KEYを取得
 https://dashboard.heroku.com/account
@@ -43,7 +42,19 @@ jobs:
           git subtree push --prefix xxx-app heroku main
 ```
 
-## 以降はGithubにプッシュするとHerokuに自動デプロイされる
+## app-htmlリポジトリをクローンする
 ```
+git clone git@github.com:minopon/app-html.git
+```
+
+## heroku cli でapp-html-1アプリを作る
+```
+heroku create --app app-html-1
+```
+
+## 何か更新してGithubにプッシュするとHerokuに自動デプロイされる
+```
+git add .
+git commit -m fix
 git push origin main
 ```
