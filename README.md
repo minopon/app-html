@@ -13,7 +13,7 @@ xxx-app　←アプリ／サイトのソースコードを入れるディレク�
 git clone git@github.com:minopon/app-html.git
 ```
 
-## heroku cli でapp-html-1アプリを作る
+## heroku CLI でapp-html-1アプリを作る
 ```
 heroku create --app app-html-1
 ```
@@ -21,7 +21,7 @@ heroku create --app app-html-1
 ## HerokuでAPI_KEYを取得
 https://dashboard.heroku.com/account
 
-## Githubのapp-htmlリポジトリ設定でAPI_KEYをSecretsに登録
+## Githubのapp-htmlリポジトリ設定でAPI_KEY内容を `HEROKU_API_KEY`という名前で登録
 https://github.com/minopon/app-html/settings/secrets/actions
 
 ## GIthubActions設定
